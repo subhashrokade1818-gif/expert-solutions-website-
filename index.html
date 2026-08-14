@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Expert Solutions - Integrated Maintenance Services and Material Supply. AC & HVAC, Civil, Electrical, Mechanical, AMC and Material Supply.">
+  <title>Expert Solutions | Integrated Maintenance Services & Material Supply</title>
+  <style>
+    :root{
+      --blue:#0757a6; --dark:#10253f; --light:#f3f8fd; --text:#334155;
+      --white:#fff; --line:#dbe8f4;
+    }
+    *{box-sizing:border-box;scroll-behavior:smooth}
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--text);line-height:1.65;background:#fff}
+    a{text-decoration:none;color:inherit}
+    .container{width:min(1120px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+    .nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:11px;font-weight:800;color:var(--dark)}
+    .brand img{width:48px;height:48px;object-fit:cover;border-radius:50%}
+    .brand span{display:block}.brand small{display:block;font-weight:500;color:#64748b;font-size:11px}
+    nav{display:flex;gap:22px;font-weight:700;font-size:14px;color:#38536f}
+    nav a:hover{color:var(--blue)}
+    .menu{display:none;background:none;border:0;font-size:28px}
+    .hero{background:linear-gradient(135deg,#f7fbff 0%,#eaf4ff 100%);padding:86px 0 72px;overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:50px;align-items:center}
+    .eyebrow{color:var(--blue);font-weight:800;letter-spacing:1.3px;font-size:13px}
+    h1{font-size:clamp(38px,6vw,68px);line-height:1.05;margin:12px 0 18px;color:var(--dark)}
+    h1 span{color:var(--blue)}
+    .lead{font-size:19px;max-width:680px;color:#52677f}
+    .buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+    .btn{padding:13px 21px;border-radius:8px;font-weight:800;border:1px solid var(--blue);display:inline-block}
+    .primary{background:var(--blue);color:#fff}.secondary{background:#fff;color:var(--blue)}
+    .hero-card{background:#fff;border:1px solid var(--line);border-radius:22px;padding:35px;box-shadow:0 20px 55px rgba(15,62,110,.12);text-align:center}
+    .hero-card img{width:145px;height:145px;object-fit:cover;border-radius:50%;margin-bottom:10px}
+    .hero-card h2{margin:5px 0;color:var(--dark)}
+    .hero-card p{margin:0;color:#64748b;font-weight:700}
+    section{padding:78px 0}.section-head{text-align:center;max-width:760px;margin:0 auto 42px}
+    .section-head h2{font-size:36px;color:var(--dark);margin:8px 0 12px}.section-head p{color:#64748b}
+    .about{background:#fff}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:34px}
+    .panel{background:var(--light);padding:30px;border-radius:16px;border:1px solid var(--line)}
+    .panel h3{color:var(--dark);margin-top:0}.check{margin:12px 0}
+    .services{background:#f8fbfe}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:#fff;border:1px solid var(--line);padding:26px;border-radius:15px;transition:.2s}
+    .card:hover{transform:translateY(-4px);box-shadow:0 12px 30px rgba(15,62,110,.09)}
+    .icon{font-size:30px}.card h3{color:var(--dark);margin:10px 0 6px}.card p{margin:0;color:#66788c;font-size:14px}
+    .supply{background:#fff}.two{display:grid;grid-template-columns:1fr 1fr;gap:25px}
+    ul{padding-left:20px}.tag{display:inline-block;background:#e8f3ff;color:var(--blue);font-weight:800;border-radius:30px;padding:8px 13px;margin:4px;font-size:13px}
+    .why{background:var(--light)}.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.why-card{background:#fff;padding:24px;border-radius:14px;border:1px solid var(--line)}
+    .why-card strong{color:var(--blue);display:block;margin-bottom:7px}
+    .clients{display:flex;flex-wrap:wrap;justify-content:center;gap:7px}
+    .contact{background:linear-gradient(135deg,#0a4f95,#082e57);color:#fff}.contact .section-head h2{color:#fff}.contact .section-head p{color:#d9e9fb}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}.contact-box{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.16);padding:28px;border-radius:15px}
+    .contact-box h3{margin-top:0}.contact-box a{color:#fff;font-weight:700}.contact .btn{border-color:#fff}.contact .secondary{color:var(--blue)}
+    footer{background:#061f3a;color:#b9cbe0;padding:24px 0;text-align:center;font-size:13px}
+    .whatsapp{position:fixed;right:20px;bottom:20px;z-index:30;background:#18a85b;color:#fff;padding:13px 17px;border-radius:999px;font-weight:800;box-shadow:0 8px 25px rgba(0,0,0,.2)}
+    @media(max-width:850px){
+      nav{display:none}.menu{display:block}.hero-grid,.about-grid,.two,.contact-grid{grid-template-columns:1fr}.cards{grid-template-columns:1fr 1fr}.why-grid{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:560px){
+      .hero{padding:55px 0}.cards,.why-grid{grid-template-columns:1fr}section{padding:58px 0}
+      .brand{font-size:14px}.brand img{width:42px;height:42px}.hero-card{padding:25px}
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#home">
+      <img src="logo.jpg" alt="Expert Solutions logo">
+      <span>EXPERT SOLUTIONS<small>Maintenance • AMC • Material Supply</small></span>
+    </a>
+    <nav>
+      <a href="#about">About</a><a href="#services">Services</a><a href="#supply">Material Supply</a>
+      <a href="#why">Why Us</a><a href="#contact">Contact</a>
+    </nav>
+    <button class="menu" aria-label="Menu" onclick="toggleNav()">☰</button>
+  </div>
+</header>
+
+<main id="home">
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow">INTEGRATED MAINTENANCE SERVICES & MATERIAL SUPPLY</div>
+      <h1>Your <span>Single-Point</span> Maintenance Partner</h1>
+      <p class="lead">Professional, responsive and practical solutions for commercial, industrial, residential and institutional facilities.</p>
+      <div class="buttons">
+        <a class="btn primary" href="#contact">Request a Service</a>
+        <a class="btn secondary" href="tel:+919225524103">Call Us</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <img src="logo.jpg" alt="Expert Solutions">
+      <h2>EXPERT SOLUTIONS</h2>
+      <p>Professional • Responsive • Cost-Effective • Service-Focused</p>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <div class="container">
+    <div class="section-head"><div class="eyebrow">01 • COMPANY</div><h2>Company Overview</h2>
+      <p>A practical, dependable approach to facility and equipment maintenance.</p></div>
+    <div class="about-grid">
+      <div class="panel">
+        <h3>What We Deliver</h3>
+        <div class="check">✓ One-point coordination for multiple maintenance disciplines.</div>
+        <div class="check">✓ Planned preventive maintenance to reduce avoidable breakdowns and downtime.</div>
+        <div class="check">✓ Responsive breakdown and repair support.</div>
+        <div class="check">✓ Maintenance materials, consumables and spare-part coordination.</div>
+        <div class="check">✓ Clear communication, service records and professional execution.</div>
+      </div>
+      <div class="panel">
+        <h3>Our Service Promise</h3>
+        <p><b>Understand the requirement</b> → <b>Plan the work</b> → <b>Execute safely</b> → <b>Communicate clearly</b> → <b>Close the job professionally</b></p>
+        <h3>Core Service Lines</h3>
+        <span class="tag">AC & HVAC</span><span class="tag">Civil</span><span class="tag">Electrical</span>
+        <span class="tag">Mechanical</span><span class="tag">AMC</span><span class="tag">Material Supply</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="services">
+  <div class="container">
+    <div class="section-head"><div class="eyebrow">02 • CAPABILITIES</div><h2>Technical Services</h2>
+      <p>Integrated maintenance capability across key facility disciplines.</p></div>
+    <div class="cards">
+      <div class="card"><div class="icon">❄️</div><h3>AC & HVAC</h3><p>Installation support, servicing, preventive and breakdown maintenance, troubleshooting, performance checks and AMC support.</p></div>
+      <div class="card"><div class="icon">🏗️</div><h3>Civil Maintenance</h3><p>General civil repair, masonry, plaster, painting, waterproofing, flooring, tile and false-ceiling related works.</p></div>
+      <div class="card"><div class="icon">⚡</div><h3>Electrical</h3><p>Installation, wiring, cabling, lighting, MCB/DB/panel work, fault finding and preventive maintenance.</p></div>
+      <div class="card"><div class="icon">⚙️</div><h3>Mechanical</h3><p>Pumps and motors support, equipment repair and servicing, troubleshooting and general mechanical maintenance.</p></div>
+      <div class="card"><div class="icon">🔧</div><h3>AMC & Facility Maintenance</h3><p>Scheduled preventive maintenance, breakdown support, inspections, service records and customized AMC models.</p></div>
+      <div class="card"><div class="icon">📦</div><h3>Material Supply</h3><p>Electrical, AC/HVAC, plumbing, civil, mechanical, hardware, safety and maintenance consumables.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="supply" class="supply">
+  <div class="container">
+    <div class="section-head"><div class="eyebrow">04 • SUPPLY</div><h2>Material Supply & Procurement Support</h2>
+      <p>Maintenance materials supplied according to client specifications and approved requirements.</p></div>
+    <div class="two">
+      <div class="panel"><h3>Materials We Coordinate</h3><ul>
+        <li>Electrical materials and consumables</li><li>AC / HVAC materials, accessories and consumables</li>
+        <li>Plumbing and sanitary materials</li><li>Civil maintenance materials</li><li>Mechanical spare parts and accessories</li>
+        <li>Hardware and general maintenance items</li><li>Safety and maintenance consumables</li>
+      </ul></div>
+      <div class="panel"><h3>Procurement Approach</h3><ul>
+        <li>Understand required specification, quantity and application.</li>
+        <li>Coordinate suitable materials from available sources.</li>
+        <li>Supply as per approved requirement and agreed commercial terms.</li>
+        <li>Coordinate delivery with maintenance activities where required.</li>
+      </ul><h3>One Partner • Multiple Requirements</h3><p>Maintenance services + AMC support + repair work + material coordination = simpler facility management.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="why" class="why">
+  <div class="container">
+    <div class="section-head"><div class="eyebrow">05 • PARTNERSHIP</div><h2>Why Expert Solutions?</h2>
+      <p>Built around reliability, responsiveness and long-term client relationships.</p></div>
+    <div class="why-grid">
+      <div class="why-card"><strong>01 • Single-point coordination</strong>Multiple maintenance disciplines coordinated through one service partner.</div>
+      <div class="why-card"><strong>02 • Responsive support</strong>A practical service approach for routine, preventive and breakdown requirements.</div>
+      <div class="why-card"><strong>03 • Preventive mindset</strong>Planned maintenance helps identify issues before they become major disruptions.</div>
+      <div class="why-card"><strong>04 • Quality-focused execution</strong>Attention to workmanship, suitability and safety.</div>
+      <div class="why-card"><strong>05 • Cost-conscious solutions</strong>Maintenance plans and material support structured around client needs.</div>
+      <div class="why-card"><strong>06 • Long-term partnership</strong>We aim to become an extension of the client's facility maintenance team.</div>
+    </div>
+    <div class="section-head" style="margin-top:55px"><h2 style="font-size:28px">Suitable Client Environments</h2></div>
+    <div class="clients">
+      <span class="tag">Corporate Offices</span><span class="tag">Commercial Buildings</span><span class="tag">Industrial Units & Factories</span>
+      <span class="tag">Warehouses & Logistics</span><span class="tag">Hospitals & Healthcare</span><span class="tag">Hotels & Hospitality</span>
+      <span class="tag">Residential Societies</span><span class="tag">Educational Institutions</span><span class="tag">Shopping Malls & Retail</span>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="container">
+    <div class="section-head"><div class="eyebrow" style="color:#a9d4ff">06 • CONTACT</div><h2>Let's Work Together</h2>
+      <p>Share your site details, equipment list or scope of work with us.</p></div>
+    <div class="contact-grid">
+      <div class="contact-box">
+        <h3>Contact Details</h3>
+        <p>📍 Panyachi Taki Road, Ambedkar Chowk, Nimbalak, Ahilyanagar, 414111</p>
+        <p>👤 Contact Person: Subhash Rokade</p>
+        <p>📞 <a href="tel:+919225524103">9225524103</a> &nbsp; | &nbsp; <a href="tel:+919087119682">9087119682</a></p>
+        <p>✉️ <a href="mailto:expertsolutions942@gmail.com">expertsolutions942@gmail.com</a></p>
+      </div>
+      <div class="contact-box">
+        <h3>Ready for Your Requirement?</h3>
+        <p>Contact Expert Solutions for AMC, facility maintenance, repair, breakdown services, technical maintenance and maintenance-material supply.</p>
+        <div class="buttons">
+          <a class="btn secondary" href="tel:+919225524103">Call Now</a>
+          <a class="btn secondary" href="https://wa.me/919225524103?text=Hello%20Expert%20Solutions%2C%20I%20have%20a%20service%20requirement.">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>© 2026 Expert Solutions • Integrated Maintenance Services & Material Supply</footer>
+<a class="whatsapp" href="https://wa.me/919225524103?text=Hello%20Expert%20Solutions%2C%20I%20have%20a%20service%20requirement.">WhatsApp</a>
+
+<script>
+function toggleNav(){
+  const nav=document.querySelector('nav');
+  nav.style.display = nav.style.display==='flex' ? 'none' : 'flex';
+  if(nav.style.display==='flex'){
+    nav.style.position='absolute'; nav.style.top='76px'; nav.style.left='0'; nav.style.right='0';
+    nav.style.background='#fff'; nav.style.padding='18px 5%'; nav.style.flexDirection='column';
+    nav.style.borderBottom='1px solid #dbe8f4';
+  }
+}
+</script>
+</body>
+</html>
